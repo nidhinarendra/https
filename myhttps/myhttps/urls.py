@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from myhttps.views import test
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^test/$', test, name='test'),
+
+    #url(r'^test/$', test),
+
 ]

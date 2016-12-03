@@ -2,3 +2,18 @@ Mandatory read this link:
 
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04
 
+
+Setup Firewall:
+sudo ufw status
+sudo ufw allow 'Nginx Full'
+sudo ufw delete allow 'Nginx HTTP'
+
+Make sure this file exists and has the nesseary nginx server configuration
+/etc/nginx/sites-available/default
+
+make sure the sym link exists like this(this is enabling the site)
+lrwxrwxrwx 1 ubuntu ubuntu 34 Dec  2 23:55 default -> /etc/nginx/sites-available/default
+
+
+
+

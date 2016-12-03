@@ -5,8 +5,25 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 Setup Firewall:
 sudo ufw status
+sudo ufw enable
 sudo ufw allow 'Nginx Full'
+
+ubuntu@ip-10-10-29-108:/tmp/https/nginx$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+Nginx Full                 ALLOW       Anywhere
+22                         ALLOW       Anywhere
+Nginx Full (v6)            ALLOW       Anywhere (v6)
+22 (v6)                    ALLOW       Anywhere (v6)
+
+# if you want to remove 
 sudo ufw delete allow 'Nginx HTTP'
+
+Start or stop or restsart nginx
+sudo /etc/init.d/nginx restart
+
 
 Make sure this file exists and has the nesseary nginx server configuration
 /etc/nginx/sites-available/default
